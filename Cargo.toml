@@ -1,0 +1,23 @@
+[package]
+name = "nemo-speech"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.88"
+description = "Safe, in-process streaming ASR wrapper for NVIDIA NeMo-Speech.cpp"
+license = "Apache-2.0"
+publish = false
+repository = "https://github.com/kckeiks/nemo-speech"
+
+[dependencies]
+nemo-speech-sys = { git = "https://github.com/kckeiks/nemo-speech-sys.git", rev = "c8bf763bc9f4520f58358feaf1b79740e6f2ec9f" }
+thiserror = "2.0"
+
+[dev-dependencies]
+libloading = "0.9"
+tempfile = "3"
+
+[lints.rust]
+unsafe_op_in_unsafe_fn = "deny"
+
+[lints.clippy]
+undocumented_unsafe_blocks = "deny"
